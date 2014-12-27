@@ -1,0 +1,17 @@
+{
+  "name": "generator-loop-sketch",
+  "version": "0.1.0",
+  "description": "Starting point for a loop based app sketch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "marcusstenbeck",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.18.5"
+  }
+}
