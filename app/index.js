@@ -1,21 +1,19 @@
 var generators = require('yeoman-generator');
 
-module.exports = generators.Base.extend({
+module.exports = generators.NamedBase.extend({
 	constructor: function() {
-		generators.Base.apply(this, arguments);
-
-		this.argument('appname', { type: String, required: true });
+		generators.NamedBase.apply(this, arguments);
 	},
 	writing: function() {
 		this.fs.copyTpl(
 			this.templatePath('index.html'),
-			this.destinationPath(this.appname + '/app/index.html'),
-			{ title: this.appname }
+			this.destinationPath(this.name + '/app/index.html'),
+			{ title: this.name }
 		);
 
 		this.fs.copyTpl(
 			this.templatePath('app.js'),
-			this.destinationPath(this.appname + '/app/js/app.js'),
+			this.destinationPath(this.name + '/app/js/app.js'),
 			{}
 		);
 	}
